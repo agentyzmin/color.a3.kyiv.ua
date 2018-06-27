@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contrast</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+
+    <style>
+        .caption {
+            color: hsl(0, 0%, 60%);
+            font-weight: 300;
+        }
+
+        div {
+            color: hsl(0, 0%, 40%);
+            font-weight: 400;
+        }
+
+        .dark {
+            color: hsl(0, 0%, 25%);
+            font-weight: 700;
+        }
+
+        .value {
+            color: hsl(0, 0%, 25%);
+            font-weight: 400;
+        }
+
+        #preview {
+            height: 45%;
+            margin-bottom: 10px;
+        }
+
+        #comment {
+            margin-bottom: 10px;
+        }
+
+        .closest-block {
+            display: flex;
+            margin-bottom: 5px;
+            font-size: 15px;
+            border: 1px solid hsl(0, 0%, 80%)!important;
+        }
+
+        .closest-color {
+            width: 15%;
+            height: 25px;
+            min-width: 25px;
+        }
+
+        .closest-name {
+            margin-left: 5%;
+            width: 45%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .closest-lvr {
+            color: hsl(0, 0%, 60%);
+            font-weight: 400;
+            width: 35%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .color-select {
+            margin-bottom: 10px;
+        }
+
+        .select-color-option-block {
+            display: flex;
+        }
+
+        .select-color-option-color {
+            width:  15%;
+            height: 25px;
+            min-width: 25px;
+        }
+
+        .select-color-option-name {
+            margin-left: 5%;
+        }
+
+        .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+            width: 100%
+        }
+
+        .palettes-select {
+            padding-left: 0px;
+            padding-right: 0px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div>A3</div>
+        </div>    
+    </div>
+    <div class="row">
+        <div class="col-sm-12 dark">Аналізатор контрасту кольорів</div>    
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div>Палітра</div>
+            <select class="col-sm-12 selectpicker palettes-select" id="palettes"></select>   
+            <div class="row">
+                <div class="col-sm-6" id="text">
+                    <div>Текст</div>
+                    <select class="color-select selectpicker" style="width: 100%;"></select>
+                    <div class="color-name row">
+                        <span class="caption col-sm-3">Назва</span>
+                        <span class="value col-sm-9"></span>
+                    </div>
+                    <div class="color-rgb row">
+                        <span class="caption col-sm-3">RGB</span>
+                        <span class="value col-sm-9"></span>
+                    </div>
+                    <div class="color-lab row">
+                        <span class="caption col-sm-3">LAB</span>
+                        <span class="value col-sm-9"></span>
+                    </div>
+                    <div class="color-hlc row">
+                        <span class="caption col-sm-3">HLC</span>
+                        <span class="value col-sm-9"></span>
+                    </div>
+                    <div class="color-cmyk row">
+                        <span class="caption col-sm-3">CMYK</span>
+                        <span class="value col-sm-9"></span>
+                    </div>
+                    <div class="color-hex row">
+                        <span class="caption col-sm-3">#</span>
+                        <span class="value col-sm-9"></span>
+                    </div>
+                    <div class="color-lvr row">
+                        <span class="caption col-sm-3">LVR</span>
+                        <span class="value col-sm-9"></span>
+                    </div>
+                </div>
+                <div class="col-sm-6" id="background">
+                    <div>Тло</div>
+                    <select class="color-select selectpicker" style="width: 100%;"></select>
+                    <div class="color-name row">
+                        <span class="caption col-sm-3">Назва</span>
+                        <span class="value col-sm-9"></span>
+                    </div>
+                    <div class="color-rgb row">
+                        <span class="caption col-sm-3">RGB</span>
+                        <span class="value col-sm-9"></span>
+                    </div>
+                    <div class="color-lab row">
+                        <span class="caption col-sm-3">LAB</span>
+                        <span class="value col-sm-9"></span>
+                    </div>
+                    <div class="color-hlc row">
+                        <span class="caption col-sm-3">HLC</span>
+                        <span class="value col-sm-9"></span>
+                    </div>
+                    <div class="color-cmyk row">
+                        <span class="caption col-sm-3">CMYK</span>
+                        <span class="value col-sm-9"></span>
+                    </div>
+                    <div class="color-hex row">
+                        <span class="caption col-sm-3">#</span>
+                        <span class="value col-sm-9"></span>
+                    </div>
+                    <div class="color-lvr row">
+                        <span class="caption col-sm-3">LVR</span>
+                        <span class="value col-sm-9"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-offset-2 col-sm-4">
+            <div>Результат</div>
+            <div id="preview" style="display: table; overflow: hidden; width: 100%">
+                <div style="display: table-cell; vertical-align: middle;">
+                    <div style="text-align: center; font-size: 70px;">Текст</div>
+                </div>
+            </div>
+            <div id="contrast" class="dark"></div>
+            <div id="comment">Для кращої розпізнаваності зробіть контраст між тлом та текстом не менше 70%</div>
+            <div id="closestCaption" class="dark">Найближчі контрастні кольори</div>
+            <div class="closest row">
+                <div id="closestText" class="col-sm-6"></div>
+                <div id="closestBackground" class="col-sm-6"></div>
+            </div>
+        </div>
+    </div>  
+</div>
+</body>
+</html>

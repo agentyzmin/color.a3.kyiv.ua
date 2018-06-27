@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Контраст кольорів</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/lang.js"></script>
+    <script src="js/tpl.js"></script>
+    <script src="js/app.js"></script>
+
+
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="http://color.a3.kyiv.ua" />
+    <meta property="og:type" content="website" />
+
+    <meta property="og:image" content="" />
+    <meta property="og:image:secure_url" content="" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="628" />
+    <meta property="og:image:alt" content="" />
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    
+</head>
+<body>
+<div class="container">
+    <div class="">
+        <a href="http://a3.kyiv.ua" style="text-decoration: none;">
+            <img class="logo" src="https://cdn.a3.kyiv.ua/logo/a3-logo-small-black.svg" width="35" height="35" alt="" ><span class="logo-text"></span>
+        </a>
+    </div>
+    <div id="languages"></div>
+    <div class="row title-margin">
+        <div class="col-sm-12 " style="display: flex;">
+            <h1 class="title"></h1>
+            <a href="" class="no-border"><div style="margin: 5px 0 0 10px; font-size: 14px;"><img src="i/about.svg" width="20px" height="20px" style="margin-top: -2px;" /> <a id="about" href=""></a> </div> </a>
+        </div>    
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div id="palleteSelectCaption" class="closestCaption"></div>
+
+            <select class="selectpicker palettes-select mb-3" id="palettes"></select>   
+
+            <div class="row">
+                <div class="col-sm-6" id="text">
+                    <div id="textSelectCaption" class="closestCaption"></div>
+                    <select class="color-select selectpicker" style="width: 100%;"></select>
+                    <div class="color-name row">
+                        <span class="caption col-sm-3 pr-1"></span>
+                        <span class="value col-sm-9 pl-0"></span>
+                    </div>
+                    <div class="color-rgb row">
+                        <span class="caption col-sm-3 pr-1 caps-tracking">RGB</span>
+                        <span class="value col-sm-9 pl-0"></span>
+                    </div>
+                    <div class="color-lab row">
+                        <span class="caption col-sm-3 pr-1 caps-tracking">LAB</span>
+                        <span class="value col-sm-9 pl-0"></span>
+                    </div>
+                    <div class="color-hlc row">
+                        <span class="caption col-sm-3 pr-1 caps-tracking">HLC</span>
+                        <span class="value col-sm-9 pl-0"></span>
+                    </div>
+                    <div class="color-cmyk row">
+                        <span class="caption col-sm-3 pr-1 caps-tracking">CMYK</span>
+                        <span class="value col-sm-9 pl-0"></span>
+                    </div>
+                    <div class="color-hex row">
+                        <span class="caption col-sm-3 pr-1">#</span>
+                        <span class="value col-sm-9 pl-0"></span>
+                    </div>
+                    <div class="color-lvr row">
+                        <span class="caption col-sm-3 pr-1 caps-tracking">LVR</span>
+                        <span class="value col-sm-9 pl-0"></span>
+                    </div>
+                </div>
+                <div class="col-sm-6" id="background">
+                    <div id="backgroundSelectCaption" class="closestCaption"></div>
+                    <select class="color-select selectpicker" style="width: 100%;"></select>
+                    <div class="color-name row">
+                        <span class="caption col-sm-3 pr-1"></span>
+                        <span class="value col-sm-9 pl-0"></span>
+                    </div>
+                    <div class="color-rgb row">
+                        <span class="caption col-sm-3 pr-1 caps-tracking">RGB</span>
+                        <span class="value col-sm-9 pl-0"></span>
+                    </div>
+                    <div class="color-lab row">
+                        <span class="caption col-sm-3 pr-1 caps-tracking">LAB</span>
+                        <span class="value col-sm-9 pl-0"></span>
+                    </div>
+                    <div class="color-hlc row">
+                        <span class="caption col-sm-3 pr-1 caps-tracking">HLC</span>
+                        <span class="value col-sm-9 pl-0"></span>
+                    </div>
+                    <div class="color-cmyk row">
+                        <span class="caption col-sm-3 pr-1 caps-tracking">CMYK</span>
+                        <span class="value col-sm-9 pl-0"></span>
+                    </div>
+                    <div class="color-hex row">
+                        <span class="caption col-sm-3 pr-1">#</span>
+                        <span class="value col-sm-9 pl-0"></span>
+                    </div>
+                    <div class="color-lvr row">
+                        <span class="caption col-sm-3 pr-1 caps-tracking">LVR</span>
+                        <span class="value col-sm-9 pl-0"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-5 col-6">
+            <div class="closestCaption"></div>
+            <div id="preview" style="display: table; overflow: hidden; width: 100%">
+                <div style="display: table-cell; vertical-align: middle;">
+                    <div style="text-align: center; font-size: 70px;"></div>
+                </div>
+            </div>
+            <div id="contrast"></div>
+            <div id="comment"></div>
+            <div id="closestCaption" class="closestCaption mt-3"></div>
+            <div class="closest row">
+                <div id="closestText" class="col-sm-6"></div>
+                <div id="closestBackground" class="col-sm-6"></div>
+            </div>
+        </div>
+    </div>  
+</div>
+</body>
+</html>

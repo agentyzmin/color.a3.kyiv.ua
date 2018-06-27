@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>smile-sad</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="smile-sad" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3">
+            <g>
+                <circle id="Oval" stroke="#DE4B2C" stroke-width="2.25" cx="10" cy="10" r="8.875"></circle>
+                <circle id="Oval-2" fill="#DE4B2C" cx="7.5" cy="7.5" r="1.5"></circle>
+                <circle id="Oval-2" fill="#DE4B2C" cx="12.5" cy="7.5" r="1.5"></circle>
+                <path d="M6.5,13 C8.6875,11.6666667 11.3125,11.6666667 13.5,13" id="Path-2" stroke="#DE4B2C" stroke-width="2.25"></path>
+            </g>
+        </g>
+    </g>
+</svg>

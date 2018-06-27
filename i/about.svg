@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>about</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="about" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" stroke-opacity="0.595504982" stroke="#0EC269" stroke-width="2.25" cx="10" cy="10" r="8.875"></circle>
+        <rect id="Rectangle-8" fill="#0EC269" x="9" y="9" width="2" height="6"></rect>
+        <circle id="Oval-2" fill="#0EC269" cx="10" cy="6" r="1.5"></circle>
+    </g>
+</svg>
