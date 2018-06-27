@@ -20,10 +20,10 @@ function getGoodContrastCaption(contrast){
 function getLanguagesLinks(){
 	var result = '';
 	if(lang != ukr)
-		result += '<a href="http://color.a3.kyiv.ua/?lang=ukr">Українська</a>';
+		result += '<a href="/?lang=ukr">Українська</a>';
 	if(lang != eng)
-		result += '<a href="http://color.a3.kyiv.ua/?lang=eng">English</a>';
+		result += '<a href="/?lang=eng">English</a>';
 	if(lang != rus)
-		result += '<a href="http://color.a3.kyiv.ua/?lang=rus">Русский</a>';
+		result += '<a href="/?lang=rus">Русский</a>';
 	return result;	
 }

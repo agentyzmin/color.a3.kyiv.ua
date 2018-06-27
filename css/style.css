@@ -238,3 +238,7 @@ div.closest-block:hover {
     color: #fff;
     background-color: #007bff;
 }*/
+
+.language-links{
+  margin-right: 20px;
+}
