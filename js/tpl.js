@@ -7,7 +7,7 @@ function getColorOption(id, hex, code){
 }
 
 function getClosestColorButton(isText, id, hex, code, lvrNumeric){
-	return '<div class="closest-block" data-is-text="' + isText + '" data-id="' + id + '"><div class="closest-color" style="background-color: ' + hex + '"></div><div class="closest-name">' + code + '</div><div class="closest-lvr">LVR ' + lvrNumeric + '</div></div>';
+	return '<div class="closest-block" data-is-text="' + isText + '" data-id="' + id + '"><div class="closest-color" style="background-color: ' + hex + '"></div><div class="closest-name">' + code + '</div><div class="closest-lvr">LRV ' + lvrNumeric + '</div></div>';
 }
 
 function getBadContrastCaption(contrast){
@@ -20,10 +20,10 @@ function getGoodContrastCaption(contrast){
 function getLanguagesLinks(){
 	var result = '';
 	if(lang != ukr)
-		result += '<a href="/?lang=ukr">Українська</a>';
+		result += '<a class="language-links" href="/?lang=ukr">Українська</a>';
 	if(lang != eng)
-		result += '<a href="/?lang=eng">English</a>';
+		result += '<a class="language-links" href="/?lang=eng">English</a>';
 	if(lang != rus)
-		result += '<a href="/?lang=rus">Русский</a>';
+		result += '<a class="language-links" href="/?lang=rus">Русский</a>';
 	return result;	
 }

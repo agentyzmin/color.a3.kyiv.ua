@@ -239,6 +239,12 @@ div.closest-block:hover {
     background-color: #007bff;
 }*/
 
+#languages{
+  font-size: 14px;
+  margin-top: 8px;
+  text-align: right;
+}
+
 .language-links{
-  margin-right: 20px;
+  margin: 20px 15px 0 0;
 }
