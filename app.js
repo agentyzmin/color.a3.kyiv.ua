@@ -88,7 +88,7 @@ jQuery(function($) {
         var closestColors = colors.map(function(c){
             return '<div class="closest-block" data-id="' + c.id + '"><div class="closest-color" style="background-color: '
             + c.hex + '"></div><div class="closest-name">' + c.code
-            + '</div><div class="closest-lvr">LVR ' + c.lvrNumeric + '</div></div>';
+            + '</div><div class="closest-lvr">LRV ' + c.lvrNumeric + '</div></div>';
         }).join('');
         if(isText) {
             $('#closestText').html('<div class="closest-caption">Текст</div>' + closestColors);
