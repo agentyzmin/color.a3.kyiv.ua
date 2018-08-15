@@ -23,7 +23,7 @@ function getLanguagesLinks(){
 		result += '<a class="language-links" href="/?lang=ukr">Українська</a>';
 	if(lang != eng)
 		result += '<a class="language-links" href="/?lang=eng">English</a>';
-	if(lang != rus)
-		result += '<a class="language-links" href="/?lang=rus">Русский</a>';
+	// if(lang != rus)
+	// 	result += '<a class="language-links" href="/?lang=rus">Русский</a>';
 	return result;	
 }
