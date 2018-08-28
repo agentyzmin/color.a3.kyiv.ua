@@ -11,7 +11,10 @@ var ukr = {
 	agents: 'Агенти змін',
 	title: 'Контраст кольорів',
 	description: '…',
-	about: 'Про що мова'
+	about: 'Про що мова',
+	facebook:'Поширити',
+	twitter:'Твітнути',
+	telegram:'Надіслати'
 };
 
 var eng = {
@@ -22,13 +25,16 @@ var eng = {
 	result: 'Result',
 	name: 'Name',
 	contrast: 'Contrast',
-	closestCaption: 'Nearest contrast color',//!!!!!//
-	comment: 'Для кращої розпізнаваності зробіть контраст між тлом та текстом не менше 70%',//!!!!!//
-	agents: 'Agenty Zmin',//!!!!!//
+	closestCaption: 'Nearest contrast colors',//!!!!!//
+	comment: 'For better recognition, make the contrast between the background and text at least 70%',//!!!!!//
+	agents: 'Agents of Change',//!!!!!//
 	title: 'Color Contrast',//!!!!!//
 	description: '',
-	about: 'About app'//!!!!!//
-}
+	about: 'About app',//!!!!!//
+	facebook:'Share',
+	twitter:'Tweet',
+	telegram:'Send'
+};
 
 var rus = {
 	short: 'rus',
@@ -42,7 +48,10 @@ var rus = {
 	comment: 'Для лучшей различаемости сделайте контраст между фоном и текстом не меньше 70%',
 	agents: 'Агенти змін',//!!!!!//
 	title: 'Контраст цветов',
-	about: 'О чем речь'//!!!!!//
-}
+	about: 'О чем речь',//!!!!!//
+	facebook:'',
+	twitter:'',
+	telegram:''
+};
 //!!!!! - значит "нужно перевести"//
 var lang = ukr;/*добавить логику выбора языка, например парсинг из URL атрибута lang*/
