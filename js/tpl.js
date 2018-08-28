@@ -17,6 +17,7 @@ function getBadContrastCaption(contrast){
 function getGoodContrastCaption(contrast){
 	return lang.contrast + ' ' + contrast + '%<span style="margin-left: 5px;"> <img class="smile" src="/i/icon-smile.svg"></span>';
 }
+
 function getLanguagesLinks(){
 	var result = '';
 	if(lang != ukr)
@@ -26,4 +27,12 @@ function getLanguagesLinks(){
 	// if(lang != rus)
 	// 	result += '<a class="language-links" href="/?lang=rus">Русский</a>';
 	return result;	
+}
+
+function getShareLinks(facebook){
+	return '<div class="facebook">' + lang.facebook + '</div>';
+}
+
+function getShareLinks(twitter){
+	return '<div class="twitter" data-via="agentyzmin">' + lang.twitter + '</div>';
 }
